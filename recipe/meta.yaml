@@ -1,5 +1,5 @@
 {% set name = "geoxarray" %}
-{% set version = "0.1.0.post0" %}
+{% set version = "0.1.0.post1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/geoxarray-{{ version }}.tar.gz
-  sha256: 16e7d01e9a54b3cfec30d8a0c382db4241c9b6051a09c074b9fceff1b2dcf688
+  sha256: a8f2054a4973e0026fe99156c630a3d784cbb3296ee7994e0a6933ccd6863c64
 
 build:
   noarch: python
@@ -17,10 +17,9 @@ build:
 requirements:
   host:
     - python >=3.9
-    - setuptools >=42
+    - setuptools >=60
     - wheel
-    - setuptools-scm >=3.4
-    - setuptools_scm_git_archive
+    - setuptools-scm
     - pip
   run:
     - python >=3.9
