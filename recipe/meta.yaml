@@ -17,10 +17,9 @@ build:
 requirements:
   host:
     - python >=3.9
-    - setuptools >=42
+    - setuptools >=60
     - wheel
-    - setuptools-scm >=3.4
-    - setuptools_scm_git_archive
+    - setuptools-scm >=8.0
     - pip
   run:
     - python >=3.9
