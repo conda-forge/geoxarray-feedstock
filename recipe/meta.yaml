@@ -1,5 +1,5 @@
 {% set name = "geoxarray" %}
-{% set version = "0.1.0.post1" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/geoxarray-{{ version }}.tar.gz
-  sha256: a8f2054a4973e0026fe99156c630a3d784cbb3296ee7994e0a6933ccd6863c64
+  sha256: 75a7f49b4c81f0c391e752354aec75e41b7e8d322e7b9ae4ae3bd60e3c0cf3bd
 
 build:
   noarch: python
