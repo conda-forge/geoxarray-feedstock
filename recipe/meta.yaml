@@ -6,27 +6,29 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/geoxarray-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/geoxarray-{{ version }}.tar.gz
   sha256: 75a7f49b4c81f0c391e752354aec75e41b7e8d322e7b9ae4ae3bd60e3c0cf3bd
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=60
     - wheel
     - setuptools-scm
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - xarray
     - pyproj >=2.2
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - geoxarray
 
